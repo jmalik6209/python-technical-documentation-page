@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <nav id="navbar" class="sticky">
+      <header class="mainheader"><h1>Python Documentation</h1></header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Installation">Installation</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Hello,_World!">Hello, World!</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Variables">Variables</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Data_Types">Data Types</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#If/Else_Statements">If/Else Statements</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Loops">Loops</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Functions">Functions</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#What_Next?">What Next?</a>
+        </li>
+      </ul>
+    </nav>
+  <main id="main-doc">
+
+    <section class="main-section" id="Introduction">
+      <header><h3>Introduction</h3></header>
+      <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.</p>
+      <p>Often, programmers fall in love with Python because of the increased productivity it provides. Since there is no compilation step, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an exception. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself, testifying to Python's introspective power. On the other hand, often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective.
+</p>
+<h6>(Executive Summary from <a href="https://www.python.org/doc/essays/blurb/" target="_blank_">Python website.</a>)</h6>
+    </section>
+    
+    <section class="main-section" id="Installation">
+      <header><h3>Installation</h2></header>
+        <p> <b>For Windows:</b> The most stable Windows downloads are available from the <a href="https://www.python.org/downloads/windows/" target="_blank_">Python for Windows</a> page. You can choose between 32-bit (labelled <b>x86</b>) and 64-bit (labelled <b>x86-64</b>) versions of Windows, each with a variety of installer options. The <b>"x86 executable installer"</b> option is what you get when you click the yellow download button on the <a href="https://www.python.org/downloads/" target="_blank_">main download page</a> because the Python core team believes there should be a default you don't have to stop and think about. This is actually a good decision because the 32-bit Python will perform just fine even if your computer runs 64-bit Windows.
+        </p>
+        <p>
+          <b>For Mac:</b> Visit the <a href="https://www.python.org/downloads/macos/" target="_blank_">Python for Mac OS X page.</a> Python 2 is a system-installed Python in MacOS versions 10.2 (Jaguar) through 10.15 (Catalina), but it is advisable to avoid using this Python for programming work and install a recent Python 3.x version instead. Python will not be installed by default in MacOS 10.15 (Catalina) or later.
+          </p>
+    </section>
+    <section class="main-section" id="Hello,_World!">
+      <header><h3>Hello, World!</h3></header>
+        <p>Once Python is installed, open up a code editor or Python's built-in IDLE (Integrated Development Environment) and type: 
+          <code>>>> print("Hello World")
+          <b>Output:
+          Hello World</b>
+        </code>
+        </p>
+        
+        <p>Congratulations, you have written your first program! Python's print command takes whatever is inside the quotations and displays it on screen. You can print regular text (called a string, or str), numbers (called integers, or int), numbers with decimals (called floating point numbers, or float), and the values of variables or functions.</p>
+        <p><b>Examples: </b> <code>>>> print("Some string") #Use hashtags to write comments in Python: code that computer ignores but instead are like notes which humans read when taking a look at your code for understanding.
+
+          >>> print(1) #returns an "int", or integer (number without decimal)
+
+          >>> print(6.9) #returns a "float", or floating point number (essentially a decimal number)
+        </code></p>
+        <p>Try writing some more yourself, and experiment with it! <b>Challenge: Can you write a few sentences about yourself and have Python print it out in the terminal?</b></p>
+    </section>
+    <section class="main-section" id="Variables">
+      <header><h3>Variables</h3></header>
+      <p>Variables in Python are used to store data for later use, and are very commonly used when writing programs. In Python, there is no command for declaring a variable. Rather, it's created the moment you assign a value to it. To assign a value, follow this format:<code>>>> x = 5 #variable with integer value
+
+        >>> name = "Jeff" #variable with string value
+
+        >>> print(x)
+
+        >>> print(name)
+        <b>Output:</b>
+        <b>5</b>
+        <b>Jeff</b></code>Here you can see that the stored values of the variables are printed out in the terminal. There are many other use cases which are more specific as well. It is considered best practice to give descriptive variable names, and variable names must start with a letter or underscore character. A variable name can't start with a number, can only contain alpha-numeric characters and underscores, and names are case-sensitive. </p>
+      <p>The value of a variable can be changed, hence making it <i>variable</i>, and subject to change. Variables can also be assigned as values to other variables. For example: <code>>>> x = 5 # value of the integer 5 is assigned to the variable x. 
+        >>> x = 6 # the variable's value is changed and reassigned to the integer 6.
+
+        >>> y = x # a new variable y is created and is equivalent to the value of variable x
+
+        >>> print(y) # the value of y is printed out in the terminal
+        <b>Output:</b>
+        <b>6</b> </code> These are all the basics of variables. Try and experiment with them yourself to see how they can be used and manipulated.</p>
+    </section>
+    <section class="main-section" id="Data_Types">
+      <header><h3>Data Types</h3></header>
+      <p>In programming, data types are an important concept as they properly help differentiate what the content of a value is, whether it is a number or text. Python has a few basic data types by default: 
+        <ol>
+          <li>Text type, or <code class="inline-code">str</code>: this is the data type which is used to describe strings, or text content. </li>
+          <li>Numeric types, or <code class="inline-code">int, float, complex</code>: These are data types with the content of numbers. <code class="inline-code">int</code> describes integers, or numbers without decimals, <code class="inline-code">float</code> describes floating point numbers, or numbers with decimals, and <code class="inline-code">complex</code> describes complex numbers, which may involve arithmetic, as well as other more advanced mathematical sequences.  </li>
+          <li>Sequence types, or <code class="inline-code">list, tuple, range</code>: These are used to store multiple data types/values (typically related) together in a sequence for storage.</li>
+          <li>Mapping type, or <code class="inline-code">dict</code>: This data type is like a database with no memory, as it maps a key to a value like a dictionary in real life would map a word to a definition. </li>
+          <li>Set types, or <code class="inline-code">set, frozenset</code>: These data types are similar to sequence types, in that it is an unordered collection type which is iterable, mutable, and has no duplicate elements. </li>
+          <li>Boolean type, or <code class="inline-code">bool</code>: This data type has only two possible values: <code class="inline-code">True</code> or <code class="inline-code">False</code>. It is typically used to check whether a certain rule or portion of code is true or false.</li>
+          <li>Binary types, or <code class="inline-code">bytes, bytearray, memoryview</code>: These more advanced types are typically used when dealing with binary numbers or if the program you are creating requires the involvement of binary, hexadecimal, or hashed data. For most general use cases, these aren't used that often.  </li>
+          <li>None type, or <code class="inline-code">NoneType</code>:  Similar to the function of <code class="inline-code">null</code> in JavaScript, the <code class="inline-code">NoneType</code> data type just means that there is no real value or data.</li>
+        </ol>
+      </p>
+      <p><a href="https://www.w3schools.com/python/python_datatypes.asp">Here</a> is an article explaining data types. Scroll down further on the menu to find more articles going into detail on each specific data type. </p>
+    </section>
+    <section class="main-section" id="If/Else_Statements">
+      <header><h3>If/Else Statements</h3></header>
+      <p>Python uses conditional If/Else statements for controlling the flow of the program. These conditions are applied so the program can decide what to do next, especially if there are multiple possible outcomes. The usual logical conditions are take from mathematics and used in Python to set up these if/else statements:
+        <ul>
+          <li>Equals: <code class="inline-code">a == b</code> </li>
+          <li>Not Equals: <code class="inline-code">a != b</code> </li>
+          <li>Less than: <code class="inline-code">a < b</code> </li>
+          <li>Less than or equal to: <code class="inline-code">a <= b</code> </li>
+          <li>Greater than: <code class="inline-code">a > b</code> </li>
+          <li>Greater than or equal to: <code class="inline-code">a >= b</code> </li>
+        </ul>
+        These conditions are used in several ways within loops to describe situations where a certain outcome is given as the output. Below are some examples:
+        <code>a = 100
+          b = 75
+          
+          if a == b: #condition saying if variables a and b are equal, the program will return text
+            print("Equal!")
+
+          elif (a > b) and (a != b): #elif stands for else-if, adds another condition saying if a is greater AND not equal to b, the program will return text
+            print("A is greater/equal to B!")
+          
+          elif (b > a) or (b == a) #elif condition saying if b is greater OR equal to a, the program will return text
+
+            print("B is greater than/equal to A!")
+
+          else: #condition that if no condition matches, the program returns text
+          print("No matches!")
+        </code>
+
+        This is a basic example of conditions and If/Else statements in Python. The output isn't included, so, without copying the code and running it, can you figure out what the program will return? 
+        </p>
+    </section>
+    <section class="main-section" id="Loops">
+      <header><h3>Loops</h3></header>
+      <p>
+        There are two types of loops in Python: <code class="inline-code">For</code> Loops and <code class="inline-code">While</code> Loops.
+      </p>
+      <h4>For Loops</h4>
+      <p>A <code class="inline-code">for</code> loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string). It can be used when you are looping over a set number of times that you know, and ends once that number of loops is done. If you wanted to loop over lists, for example, you could do this: <code>>>> fruits = ["apple", "banana", "cherry"]
+>>> for x in fruits:
+  >>> print(x)
+  <b>Output:</b>
+  <b>apple</b>
+  <b>banana</b>
+  <b>cherry</b></code>
+  Or, if you wanted to loop through letters in a word, you could do: <code>>>> for x in "fruit":
+  >>> print(x)
+<b>Output:</b>
+<b>f</b>
+<b>r</b>
+<b>u</b>
+<b>i</b>
+<b>t</b>
+</code>
+To loop through a set of code a specified number of times, we can use the <code class="inline-code">range()</code> function. The <code class="inline-code">range()</code> function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number. Like this:<code>Increment the sequence with 3 (default is 1), start sequence from 2 (default is 0), end at 30:
+  >>> for x in range(2, 30, 3):
+  >>> print(x)
+</code>
+What do you think the output for this block of code will be? Try it yourself!</p>
+      <h4>While Loops</h4>
+      <p>With the <code class="inline-code">while</code> loop we can execute a set of statements as long as a condition is true. For example, if you want to print a number, i, as long as it is less than 6, you can write something like this:<code>>>> i = 1
+>>> while i < 6:
+>>> print(i)
+  >>> i += 1 #increments i by 1 so it keeps counting up and the loop won't repeat
+  <b>Output:</b>
+  <b>1</b>
+  <b>2</b>
+  <b>3</b>
+  <b>4</b>
+  <b>5</b>
+  </code>
+  There are some other conditions used in both <code class="inline-code">for</code> and <code class="inline-code">while</code> loops. These are <code class="inline-code">break</code>, <code class="inline-code">continue</code>, and <code class="inline-code">else</code>. Examples:<code>#Break statement stops the loop if a certain condition is met. In this case, exits loop when i = 3
+    i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+
+  #Continue statement stops current iteration of the loop and continues with the next. In this case, continues when i = 3
+  i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+
+  #Else statement after a while loop prints a message once the condition is false. 
+  i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+  </code> 
+  Try these all yourself and experiment with the outputs! See if you can find different conditions to implement into your <code class="inline-code">for</code> and <code class="inline-code">while</code> loops. </p>
+    </section>
+    <section class="main-section" id="Functions">
+      <header><h3>Functions</h3></header>
+      <p>A function is a block of code that only runs when it is called. They are useful in conditional programming/control flow when you may not need or want part of a program to run throughout. You can pass data, known as parameters, into a function, which returns data as a result. In Python a function is defined using the def keyword, and called by using the function name followed by parentheses: <code>def my_function():
+  print("Hello from a function")
+
+my_function() #calls function to be used
+<b>Output:</b>
+<b>Hello from a function</b></code>
+Another part of functions is their arguments which are put in their parentheses once they are defined. You can add as many arguments as you want, just separate them with a comma. The following example has a function with one argument (firstname). When the function is called, we pass along a first name, which is used inside the function to print the full name:<code>def my_function(fname):
+  print(fname + " Billings")
+
+my_function("Jeff")
+my_function("Marcus")
+my_function("Linus")
+<b>Output:</b>
+<b>Jeff Billings</b>
+<b>Marcus Billings</b>
+<b>Linus Billings</b>
+</code>
+These are the basic features of a function. Within them, you can include any code you want like regular programs would have, such as loops, conditional statements, various data types, etc. Functions are one of the biggest parts of programming and will help you go from a Python beginner to someone more experienced as you learn how to utilize them. </p>
+    </section>
+    <section class="main-section" id="What_Next?">
+      <header><h3>What Next?</h3></header>
+      <p> Now that you have learned the basics of Python, below are a few things you can do in the future to further build your knowledge of the programming language:
+        <ul>
+          <li>Learn about <code class="inline-block">classes</code> and object oriented programming in Python (OOP)</li>
+          <li>Code a program using the commands learned in this documentation</li>
+          <li>Dive into more specific data types, arguments, and technical features of the language</li>
+          <li>Project-based learning: start your own personal project for Python and pick the information up as you need it during the project. </li>
+          <li>Follow a tutorial/course for additional Python fluency</li>
+        </ul>
+      </p>
+      <p>Thanks for reading the documentation!</p>
+       
+    </section>
+</main>
+<footer>
+  <h5>Much of the information in this documentation, including paragraphs/python code examples, was taken from the W3Schools <a href="https://www.w3schools.com/python/default.asp" target="_blank_">Python Tutorial</a>, <a href="https://www.python.org/" target="_blank">python.org</a>, or other sources. However, my code for this project was my original work. This was NOT meant to be a proper documentation where the information was plagiarized, but rather filler text for this HTML & CSS project where I had to code/properly format a documentation. That being said, please let me know if you want any of the text to be taken down as I will be happy to do so. Thank you for viewing the project!</h5>
+</footer>
+</body>
+</html>
